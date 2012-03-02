@@ -1,0 +1,42 @@
+-include ../../Rules.make
+
+ENV_SETUP ?= ../../linux-devkit/environment-setup
+DESTDIR ?= 
+PLATFORM ?= 
+PLATFORM_DEFINE ?= "Platform_${PLATFORM}"
+
+SOURCES = main.cpp tstatform.pro
+
+all: debug release
+
+qmake : tstatform.pro
+	@. ${ENV_SETUP}; \
+	qmake2 CONFIG+=debug_and_release QMAKE_CXXFLAGS_DEBUG+=-D${PLATFORM_DEFINE} QMAKE_CXXFLAGS_RELEASE+=-D${PLATFORM_DEFINE} tstatform.pro
+
+debug : ${SOURCES} qmake
+	@. ${ENV_SETUP}; \
+	make -f Makefile debug
+
+release : ${SOURCES} qmake
+	@. ${ENV_SETUP}; \
+	make -f Makefile release
+
+clean : ${SOURCES} qmake
+	@. ${ENV_SETUP}; \
+	make -f Makefile distclean
+
+install: release
+	@install -d ${DESTDIR}/usr/bin 
+	@install tstat ${DESTDIR}/usr/bin/tstat
+	@install -d ${DESTDIR}/usr/share/matrix-gui-2.0/apps/qt_tstat
+	@cp -r apps/qt_tstat/*  ${DESTDIR}/usr/share/matrix-gui-2.0/apps/qt_tstat
+	@echo "tstat release version installed."
+
+install_debug: debug
+	@install -d ${DESTDIR}/usr/bin 
+	@install tstat ${DESTDIR}/usr/bin/tstat
+	@install -d ${DESTDIR}/usr/share/matrix-gui-2.0/apps/qt_tstat
+	@cp -r apps/qt_tstat/*  ${DESTDIR}/usr/share/matrix-gui-2.0/apps/qt_tstat
+	@echo "tstat debug version installed."
+
+

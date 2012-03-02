@@ -1,0 +1,7 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>svgbutton/LTSquare/normal.svg</file>
+    <file>svgbutton/LTSquare/pressed.svg</file>
+    <file>svgbutton/LTSquare/hovered.svg</file>
+</qresource>
+</RCC>

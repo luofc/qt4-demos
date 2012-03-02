@@ -1,0 +1,1264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #151B54;/*rgb(75,75,75);*/
+    color: #151B54;
+}
+
+QTabWidget::pane {
+    /*border-top: 1px solid white;*//*rgb(180,180,180);*/
+    position: absolute;
+    border: 2px solid #151B54;
+	
+    
+}
+
+QTabWidget::tab-bar {
+    alignment: center;
+}
+
+QTabBar::tab {
+    color: white;
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #151B54, stop:1 #151B54); /*rgb(116, 116, 118), stop:1 rgb(59, 57, 60));*/
+    border: 2px solid #151B54; /*rgb(180,180,180);*/
+    border-radius: 4px;
+    padding: 4px;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    color: #151B54; /*black;*/
+    background: white; /*rgb(180,180,180);*/
+}
+
+QTabBar::tab:hover {
+    border-color: #151B54; /*rgb(180,180,180);*/
+}
+
+QGroupBox { 
+    color: #151B54;
+    background: white;
+    border-radius: 7px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0.4em 0.4em 0.1em 0.4em;
+    background: transparent;
+}
+
+QGroupBox[BackgroundImage=true] {
+    color: black;
+    background-color: #151B54;
+    background-image: url(:/BackgroundImage.png);
+}
+
+QGroupBox QLabel {
+    color: #151B54;
+	background-color: transparent;
+}
+
+
+ QPushButton {
+     font: bold 16pt;
+     color: white ;
+     background-color: transparent;
+	border-image: url(:/usr/share/matrix-gui-2.0/apps/qt_tstat/appimages/pushblueup.png);
+ 		border-top: 3px transparent;
+     border-bottom: 3px transparent;
+     border-right: 10px transparent;
+     border-left: 10px transparent;
+ }
+
+QPushButton:focus {
+	border-image: url(:/usr/share/matrix-gui-2.0/apps/qt_tstat/appimages/pushbluedown.png);
+}
+
+QPushButton:pressed {
+	border-image: url(:/usr/share/matrix-gui-2.0/apps/qt_tstat/appimages/pushbluedown.png);
+}
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="margin">
+    <number>5</number>
+   </property>
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="tabPosition">
+      <enum>QTabWidget::South</enum>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="homeTab">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <attribute name="title">
+       <string>Home</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="margin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="widget" native="true">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QGroupBox" name="groupBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="title">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_2">
+             <item row="0" column="0" rowspan="2">
+              <widget class="QGroupBox" name="groupBox_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>25</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">
+QGroupBox { 
+    color: #151B54;
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 white, stop:1 #E0FFFF);
+    border: 2px solid #151B54; /*rgb(180, 180, 180); */
+    border-radius: 7px;
+    /*padding-top: 1.5em;*/
+}
+
+QLabel{
+	padding-bottom: 9px;
+}</string>
+               </property>
+               <property name="title">
+                <string/>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_2">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>9</number>
+                </property>
+                <property name="topMargin">
+                 <number>9</number>
+                </property>
+                <property name="rightMargin">
+                 <number>9</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="fansettingslabel">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Fan Settings</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="autoButton">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Auto</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="highButton">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>High</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="lowButton">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Low</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="offButton">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Off</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="0" column="2" rowspan="2">
+              <widget class="QGroupBox" name="groupBox_4">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>25</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">
+QGroupBox { 
+    color: #151B54;
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 white, stop:1 #E0FFFF);
+    border: 2px solid #151B54; /*rgb(180, 180, 180); */
+    border-radius: 7px;
+    /*padding-top: 1.5em;*/
+}
+</string>
+               </property>
+               <property name="title">
+                <string/>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_4">
+                <item>
+                 <widget class="QLabel" name="setpointlabel">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Set Point</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_5">
+                  <property name="margin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QLCDNumber" name="setpointlcdNumber">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>100</height>
+                     </size>
+                    </property>
+                    <property name="whatsThis">
+                     <string/>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 127);
+border-color: rgb(0, 0, 127);
+
+</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::Box</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Plain</enum>
+                    </property>
+                    <property name="lineWidth">
+                     <number>5</number>
+                    </property>
+                    <property name="midLineWidth">
+                     <number>0</number>
+                    </property>
+                    <property name="numDigits">
+                     <number>4</number>
+                    </property>
+                    <property name="intValue" stdset="0">
+                     <number>75</number>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QtScrollWheel" name="scrollWheel" native="true">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QGroupBox" name="groupBox_3">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>50</horstretch>
+                 <verstretch>80</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QGroupBox {
+	background-color: rgb(255, 255, 255);
+	border-color: rgb(255, 255, 255);
+}
+
+</string>
+               </property>
+               <property name="title">
+                <string/>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_5">
+                <item>
+                 <spacer name="verticalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="dateLabel">
+                  <property name="font">
+                   <font>
+                    <family>Bitstream Charter</family>
+                    <pointsize>10</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::NoFrame</enum>
+                  </property>
+                  <property name="text">
+                   <string>Wednesday, 15 February 2012</string>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="timeLabel">
+                  <property name="font">
+                   <font>
+                    <family>Bitstream Charter</family>
+                    <pointsize>10</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>12:12:12 pm</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_3">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="tempLabel">
+                  <property name="font">
+                   <font>
+                    <family>Sans Serif</family>
+                    <pointsize>10</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="text">
+                   <string>70.3oF</string>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="centerinfolabel">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Current Temperature</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QGroupBox" name="logoBox">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+                 <horstretch>50</horstretch>
+                 <verstretch>30</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QWidget {
+	background-color: rgb(255, 255, 255);
+	border-color: rgb(255, 255, 255);
+}</string>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_4">
+                <property name="margin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="logoLabel">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>1000</width>
+                    <height>1000</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>test</string>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>false</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="settingTab">
+      <attribute name="title">
+       <string>Settings</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_11">
+       <property name="margin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="widget_5" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_12">
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QGroupBox" name="groupBox_7">
+            <property name="styleSheet">
+             <string notr="true">QGroupBox { 
+    color: #151B54;
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 white, stop:1 #E0FFFF);
+    border: 2px solid #151B54; /*rgb(180, 180, 180); */
+    border-radius: 7px;
+    /*padding-top: 1.5em;*/
+}
+QPushButton:focus {
+	border-image: url(:/usr/share/matrix-gui-2.0/apps/qt_tstat/appimages/pushblueup.png);
+}</string>
+            </property>
+            <property name="title">
+             <string/>
+            </property>
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="2" column="0">
+              <widget class="QGroupBox" name="groupBox_8">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                 <horstretch>50</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QGroupBox { 
+    background-color: transparent;
+
+	border-color: transparent;
+}
+</string>
+               </property>
+               <property name="title">
+                <string/>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_14">
+                <item>
+                 <widget class="QPushButton" name="exitButton">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Exit</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="0" column="0" rowspan="2">
+              <widget class="QGroupBox" name="groupBox_10">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                 <horstretch>50</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="title">
+                <string/>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_6">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="margin">
+                 <number>9</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="changedateButton">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Date</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_3">
+                  <item>
+                   <widget class="QLabel" name="label">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string>Server</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="serverButton">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>100</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>16</pointsize>
+                      <weight>75</weight>
+                      <italic>false</italic>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <property name="text">
+                     <string>Start</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="0" column="1" rowspan="3">
+              <widget class="QGroupBox" name="groupBox_11">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>50</horstretch>
+                 <verstretch>100</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="title">
+                <string/>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_3">
+                <item row="0" column="3">
+                 <widget class="QLabel" name="wsetlabel">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Set</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <widget class="QLabel" name="wlowlabel">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Low</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLabel" name="whighlabel">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>High</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="wdaylabel">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Day</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="day1label">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Monday</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="day2label">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Tuesday</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="day3label">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Wednesday</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLabel" name="high1label">
+                  <property name="text">
+                   <string>75</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLabel" name="high2label">
+                  <property name="text">
+                   <string>75</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QLabel" name="high3label">
+                  <property name="text">
+                   <string>75</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QLabel" name="low1label">
+                  <property name="text">
+                   <string>50</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="2">
+                 <widget class="QLabel" name="low2label">
+                  <property name="text">
+                   <string>50</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="2">
+                 <widget class="QLabel" name="low3label">
+                  <property name="text">
+                   <string>50</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="3">
+                 <widget class="QPushButton" name="day1setButton">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>70</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="3">
+                 <widget class="QPushButton" name="day2setButton">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>70</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="3">
+                 <widget class="QPushButton" name="day3setButton">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>70</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="webTab">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <attribute name="title">
+       <string>Web</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="margin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="widget_3" native="true">
+         <property name="styleSheet">
+          <string notr="true">QWidget{
+     color: #151B54;
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 white, stop:1 #E0FFFF);
+    border: 2px solid #151B54; /*rgb(180, 180, 180); */
+    border-radius: 7px;
+    /*padding-top: 1.5em;*/
+}
+
+QWebView{
+	background-color: rgb(255, 255, 255);
+}</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QGroupBox" name="groupBox_6">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QGroupBox {
+    border-radius: 0px;
+	border-color: transparent;
+    padding: 0px 0px;
+	background-color: transparent;
+}
+ QPushButton {
+     font: bold 16pt;
+     color: white ;
+     background-color: transparent;
+	 border-top: 3px transparent;
+     border-bottom: 3px transparent;
+     border-right: 10px transparent;
+     border-left: 10px transparent;
+ }
+QPushButton:focus {
+	border-image: url(:/usr/share/matrix-gui-2.0/apps/qt_tstat/appimages/pushblueup.png);
+}
+QPushButton:pressed {
+	border-image: url(:/usr/share/matrix-gui-2.0/apps/qt_tstat/appimages/pushbluedown.png);
+}</string>
+            </property>
+            <property name="title">
+             <string/>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="margin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="tiwebButton">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                 <weight>75</weight>
+                 <italic>false</italic>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>TI</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="googlewebButton">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Google</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="wifiButton">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                 <weight>75</weight>
+                 <italic>false</italic>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Wifi</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="zoompButton">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Zoom -</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="zoommButton">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Zoom +</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+            <zorder>wifiButton</zorder>
+            <zorder>tiwebButton</zorder>
+            <zorder>googlewebButton</zorder>
+            <zorder>zoompButton</zorder>
+            <zorder>zoommButton</zorder>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_13">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>5</number>
+            </property>
+            <property name="rightMargin">
+             <number>5</number>
+            </property>
+            <property name="bottomMargin">
+             <number>5</number>
+            </property>
+            <item>
+             <widget class="QWebView" name="webView">
+              <property name="url">
+               <url>
+                <string>http://www.ti.com/</string>
+               </url>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="imgTab">
+      <attribute name="title">
+       <string>Img</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_9">
+       <property name="margin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="widget_4" native="true">
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+	color:white;
+}</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="photoLabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>../../../usr/share/matrix-gui-2.0/apps/qt_tstat/tstatimages/Ascent.jpg</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header>QtWebKit/QWebView</header>
+  </customwidget>
+  <customwidget>
+   <class>QtScrollWheel</class>
+   <extends>QWidget</extends>
+   <header>qtscrollwheel.h</header>
+   <container>1</container>
+   <slots>
+    <signal>valueChanged(int)</signal>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

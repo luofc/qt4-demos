@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/usr/share/matrix-gui-2.0">
+        <file>apps/qt_tstat/appimages/logo.png</file>
+        <file>apps/qt_tstat/appimages/pushbluedown.png</file>
+        <file>apps/qt_tstat/appimages/pushblueup.png</file>
+        <file>BackgroundImage.png</file>
+    </qresource>
+</RCC>

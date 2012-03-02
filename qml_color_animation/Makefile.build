@@ -1,0 +1,14 @@
+-include ../../Rules.make
+
+ENV_SETUP ?= ../../linux-devkit/environment-setup
+DESTDIR ?= 
+PLATFORM ?= 
+PLATFORM_DEFINE ?= "Platform_${PLATFORM}"
+
+install: 
+	@install -d ${DESTDIR}/usr/share/matrix-gui-2.0/apps/qml_color_animation
+	@cp -r apps/qml_color_animation/*  ${DESTDIR}/usr/share/matrix-gui-2.0/apps/qml_color_animation
+	@echo "qml_color_animation release version installed."
+
+
+

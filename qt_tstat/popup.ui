@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Popup</class>
+ <widget class="QWidget" name="Popup">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>502</width>
+    <height>374</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="toolTip">
+   <string/>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: black;/*rgb(75,75,75);*/
+
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <property name="maximumSize">
+      <size>
+       <width>300</width>
+       <height>250</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget {
+    background-color: #151B54;/*rgb(75,75,75);*/
+    color: white;
+  border: 2px solid white; /*rgb(180,180,180);*/
+    border-radius: 4px;
+}
+QLabel{
+border: 2px solid #151B54; /*rgb(180,180,180);*/
+}
+
+QComboBox { 
+font: bold 14pt;
+     border: 3px solid white;
+     border-radius: 3px;
+     padding: 1px 18px 1px 3px;
+     min-width: 6em;
+     min-height: 2em;
+
+}
+
+
+QGroupBox { 
+    color: #151B54;
+    background: white;
+    border-radius: 7px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0.4em 0.4em 0.1em 0.4em;
+    background: transparent;
+}
+
+QGroupBox[BackgroundImage=true] {
+    color: black;
+    background-color: #151B54;
+    background-image: url(:/BackgroundImage.png);
+}
+
+QGroupBox QLabel {
+    color: #151B54;
+	background-color: transparent;
+}
+
+
+ QPushButton {
+     font: bold 16pt;
+     color: white ;
+     background-color: transparent;
+	border-image: url(:/usr/share/matrix-gui-2.0/apps/qt_tstat/appimages/pushblueup.png);
+ 		border-top: 3px transparent;
+     border-bottom: 3px transparent;
+     border-right: 10px transparent;
+     border-left: 10px transparent;
+ }
+
+QPushButton:focus {
+	border-image: url(:/usr/share/matrix-gui-2.0/apps/qt_tstat/appimages/pushblueup.png);
+}
+
+QPushButton:pressed {
+	border-image: url(:/usr/share/matrix-gui-2.0/apps/qt_tstat/appimages/pushbluedown.png);
+}</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="3" column="0">
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Change</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Month</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Date</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="closepopupButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Close</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <spacer name="verticalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QComboBox" name="monthcomboBox">
+          <property name="minimumSize">
+           <size>
+            <width>165</width>
+            <height>54</height>
+           </size>
+          </property>
+          <property name="palette">
+           <palette>
+            <active>
+             <colorrole role="WindowText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>21</red>
+                <green>27</green>
+                <blue>84</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ButtonText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>21</red>
+                <green>27</green>
+                <blue>84</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>21</red>
+                <green>27</green>
+                <blue>84</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="WindowText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>21</red>
+                <green>27</green>
+                <blue>84</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ButtonText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>21</red>
+                <green>27</green>
+                <blue>84</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>21</red>
+                <green>27</green>
+                <blue>84</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="WindowText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>21</red>
+                <green>27</green>
+                <blue>84</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ButtonText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>21</red>
+                <green>27</green>
+                <blue>84</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>21</red>
+                <green>27</green>
+                <blue>84</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="editable">
+           <bool>false</bool>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+          </property>
+          <property name="frame">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QComboBox" name="datecomboBox">
+          <property name="minimumSize">
+           <size>
+            <width>165</width>
+            <height>54</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="testlineEdit">
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+}</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Keyboard Test:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
