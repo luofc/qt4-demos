@@ -3,6 +3,7 @@
 ENV_SETUP ?= ../../linux-devkit/environment-setup
 DESTDIR ?= 
 PLATFORM ?= 
+MATRIX_APP_DIR ?= /usr/share/matrix-gui-2.0/apps/
 PLATFORM_DEFINE ?= "Platform_${PLATFORM}"
 
 SOURCES = src/main.cpp qtquickplayground.pro
@@ -25,18 +26,19 @@ clean : ${SOURCES} qmake
 	@. ${ENV_SETUP}; \
 	make -f Makefile distclean
 
-install: release
+install_common:
 	@install -d ${DESTDIR}/usr/bin 
-	@install runQMLplay.sh ${DESTDIR}/usr/bin/
-	@install -d ${DESTDIR}/usr/share/matrix-gui-2.0/apps/qml_playground
-	@cp -r apps/qml_playground/*  ${DESTDIR}/usr/share/matrix-gui-2.0/apps/qml_playground
+	@install -m 0755 runQMLplay.sh ${DESTDIR}/usr/bin/
+	@install -d ${DESTDIR}${MATRIX_APP_DIR}/qml_playground
+	@cp -r apps/qml_playground/*  ${DESTDIR}${MATRIX_APP_DIR}/qml_playground
+	@cp -rf content ${DESTDIR}${MATRIX_APP_DIR}/qml_playground/
+	@cp -rf icons ${DESTDIR}${MATRIX_APP_DIR}/qml_playground/
+	@install -m 0755 qtquickplayground ${DESTDIR}${MATRIX_APP_DIR}/qml_playground/
+
+install: release install_common
 	@echo "qml_playground release version installed."
 
-install_debug: debug
-	@install -d ${DESTDIR}/usr/bin 
-	@install runQMLplay.sh ${DESTDIR}/usr/bin/
-	@install -d ${DESTDIR}/usr/share/matrix-gui-2.0/apps/qml_playground
-	@cp -r apps/qml_playground/*  ${DESTDIR}/usr/share/matrix-gui-2.0/apps/qml_playground
-	@echo "qml_playground release version installed."
+install_debug: debug install_common
+	@echo "qml_playground debug version installed."
 
 

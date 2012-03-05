@@ -2,7 +2,7 @@
 [Desktop Entry]
 Name=Playground
 GenericName=Demo App
-Icon=/usr/share/matrix-gui-2.0/apps/qt4/qml-icon.png
+Icon=/usr/share/matrix-gui-2.0/apps/images/qml-icon.png
 Exec=runQMLplay.sh
 Type=Application
 Categories=Qt4

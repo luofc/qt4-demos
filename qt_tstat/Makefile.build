@@ -3,6 +3,7 @@
 ENV_SETUP ?= ../../linux-devkit/environment-setup
 DESTDIR ?= 
 PLATFORM ?= 
+MATRIX_APP_DIR ?= /usr/share/matrix-gui-2.0/apps/
 PLATFORM_DEFINE ?= "Platform_${PLATFORM}"
 
 SOURCES = main.cpp tstatform.pro
@@ -25,18 +26,14 @@ clean : ${SOURCES} qmake
 	@. ${ENV_SETUP}; \
 	make -f Makefile distclean
 
-install: release
+install_common:
 	@install -d ${DESTDIR}/usr/bin 
-	@install tstat ${DESTDIR}/usr/bin/tstat
-	@install -d ${DESTDIR}/usr/share/matrix-gui-2.0/apps/qt_tstat
-	@cp -r apps/qt_tstat/*  ${DESTDIR}/usr/share/matrix-gui-2.0/apps/qt_tstat
+	@install -m 0755 tstat ${DESTDIR}/usr/bin/tstat
+	@install -d ${DESTDIR}${MATRIX_APP_DIR}/qt_tstat
+	@cp -rf apps/qt_tstat/*  ${DESTDIR}${MATRIX_APP_DIR}/qt_tstat
+
+install: release install_common
 	@echo "tstat release version installed."
 
-install_debug: debug
-	@install -d ${DESTDIR}/usr/bin 
-	@install tstat ${DESTDIR}/usr/bin/tstat
-	@install -d ${DESTDIR}/usr/share/matrix-gui-2.0/apps/qt_tstat
-	@cp -r apps/qt_tstat/*  ${DESTDIR}/usr/share/matrix-gui-2.0/apps/qt_tstat
+install_debug: debug install_common
 	@echo "tstat debug version installed."
-
-
